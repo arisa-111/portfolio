@@ -14,6 +14,18 @@ function setup() {
   background(255);
 }
 
+if (window.matchMedia('(max-width: 430px)').matches) {
+  function draw() {
+  noStroke();
+  drawCircle01(100, 0, 3);
+  drawCircle01(width/2-100, height/2+100, 5);
+  drawCircle01(width/4*3, height+200, 6);
+  drawCircle02(0, 0, 3);
+  drawCircle02(width/4*1, height/4*1, 4);
+  drawCircle02(width, height/2, 6);
+}
+}
+
 function draw() {
   noStroke();
   drawCircle01(100, 0, 3);
