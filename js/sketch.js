@@ -7,6 +7,7 @@ function setup() {
   canvas.style('left', '0');
   canvas.style('z-index','-1');
   frameRate(10);
+  windowResized();
 }
 
 function draw() {
@@ -24,13 +25,17 @@ function draw() {
 }
 
 function drawCircle01(x, y, i) {
-      fill(220, 243, 250, 100);
-      circle(x, y, height/4*1 + 400 * noise(i + frameCount * 0.02));
-      filter(BLUR, 8);
+  fill(220, 243, 250, 100);
+  circle(x, y, height/4*1 + 400 * noise(i + frameCount * 0.02));
+  filter(BLUR, 8);
 }
 
 function drawCircle02(x, y, i) {
-      fill(207, 247, 246, 70);
-      circle(x, y, height/3*1.5 + 500 * noise(i + frameCount * 0.02));
-      filter(BLUR, 10);
+  fill(207, 247, 246, 70);
+  circle(x, y, height/3*1.5 + 500 * noise(i + frameCount * 0.02));
+  filter(BLUR, 10);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
