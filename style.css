@@ -17,6 +17,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+canvas {
+    display: block; 
+}
+
 body {
     min-height: 100vh;
     font-family: "Manrope", "source-han-sans-japanese", sans-serif;
