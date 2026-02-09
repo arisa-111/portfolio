@@ -1,6 +1,9 @@
+p5.disableFriendlyErrors = true;
+
 let canvas;
 
 function setup() {
+  pixelDensity(1);
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.style('position', 'fixed');
   canvas.style('top', '0');
@@ -8,10 +11,10 @@ function setup() {
   canvas.style('z-index','-1');
   frameRate(10);
   windowResized();
+  background(255);
 }
 
 function draw() {
-  background(255);
   noStroke();
   drawCircle01(100, 0, 3);
   drawCircle01(width/2-100, height/2+100, 5);
