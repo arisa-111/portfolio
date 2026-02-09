@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <link rel="icon" href="img/portfolio_icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+    (function(d) {
+        var config = {
+        kitId: 'azg4xlw',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
+    <!-- p5.js -->
+    <script src="library/p5.min.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">Arisa Iba</a>
+        <!-- ハンバーガーアイコン -->
+        <button class="hamburger-menu" aria-label="メニューを開く">
+            <span class="hamburger01"></span>
+            <span class="hamburger02"></span>
+        </button>
+
+        <div class="nav">
+            <img src="img/left_cloud.png" class="cloud" alt="雲のイラスト">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/right_cloud.png" class="cloud" alt="雲のイラスト">
+        </div>
+    </header>
+
+    <main>
+        <article class="works02page">
+            <section class="workspage-mv">
+                <div class="workspage-mv-title">
+                    <h1>わくわく英会話教室</h1>
+                    <p>オリジナルバナー</p>
+                </div>
+            </section>
+
+            <section class="workspage-intro">
+                <div class="workspage-intro-text-container">
+                    <div class="workspage-intro-text-item">
+                        <h1>Schedule</h1>
+                        <p class="date">2025.7.14&nbsp;-&nbsp;2025.7.15</p>
+                    </div>
+                    <div class="workspage-intro-text-item">
+                        <h1>Role</h1>
+                        <p>デザイン制作</p>
+                    </div>
+                    <div class="workspage-intro-text-item">
+                        <h1>Client</h1>
+                        <p>株式会社わくわく英会話教室（架空）</p>
+                    </div>
+                </div>
+
+                <div class="workspage04-img">
+                    <img src="img/works04_design.jpg" alt="バナー画像">
+                </div>
+            </section>
+
+            <!-- Design Concept -->
+            <section class="workspage01">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number">01</span>Design&nbsp;Concept</h1>
+                    </div>
+                    <p>「遊びながら楽しく学べる小学生向け英会話教室」をコンセプトに設定し、子どもが楽しく英語を学びながら好奇心や自信も育っていくような明るいイメージが伝わるデザインにしました。</p>
+                </div>
+
+                <div class="workspage01-right">
+                    <div class="workspage01-right-item">
+                        <h2>Purpose</h2>
+                        <p>入会数の増加・体験レッスンの告知・申し込み受付</p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <h2>Target</h2>
+                        <p>英語学習を始めたい小学生とその保護者</p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <h2>Font</h2>
+                        <p>ポップな遊び心の効いたフォントを使い、「遊んで学ぶ」という言葉の通り、わくわくする雰囲気が出るようにしました。</p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <h2>Color</h2>
+                        <p>黄と青をメインに使用してわくわく感や明るさを伝え、キャッチコピーや背景に子どもが好むカラフルさを加えました。</p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <h2>Size</h2>
+                        <p>600px&nbsp;&times;&nbsp;500px</p>
+                    </div>
+                </div>
+            </section>    
+
+            <section class="workspage04-spimg">
+                <img src="img/works04_sp.png" alt="スマートフォンのデザイン">
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>arisa.iba.portfolio</p>
+    </footer>
+
+    <!-- ハンバーガーメニュー -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</body>
+
+</html>

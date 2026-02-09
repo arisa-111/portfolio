@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <link rel="icon" href="img/portfolio_icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+    (function(d) {
+        var config = {
+        kitId: 'azg4xlw',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
+    <!-- p5.js -->
+    <script src="library/p5.min.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">Arisa Iba</a>
+        <!-- ハンバーガーアイコン -->
+        <button class="hamburger-menu" aria-label="メニューを開く">
+            <span class="hamburger01"></span>
+            <span class="hamburger02"></span>
+        </button>
+
+        <div class="nav">
+            <img src="img/left_cloud.png" class="cloud" alt="雲のイラスト">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/right_cloud.png" class="cloud" alt="雲のイラスト">
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="aboutpage-mv">
+                <h1>About Me</h1>
+            </section>
+
+            <section class="aboutpage01">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number">01</span>Profile</h1>
+                    </div>
+                </div>
+
+                <div class="workspage01-right">
+                    <div class="workspage01-right-item">
+                        <div class="workspage02-blank02">
+                            <h2>Name</h2>
+                        </div>
+                        <p class="name-jp">伊庭有咲<br><span class="name-en">Arisa Iba</span></p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <div class="workspage02-blank02">
+                            <h2>Background</h2>
+                        </div>
+                        <p class="background-text">大学在学中にデジタルハリウッドSTUDIOに通い、WEBデザインやインタラクション作品制作を学び、WEBやアプリの技術に興味を持つ。大学卒業後、IT企業に約1年間務め、2025年6月よりSAMURAI ENGINEERにてWEBデザイン/WEBサイト制作を本格的に学び始める。現在はWEBサイト制作/アプリケーション制作エンジニアを目指して就職活動中です。 </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="aboutpage02">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number">02</span>My Strengths</h1>
+                    </div>
+                </div>
+
+                <div class="aboutpage02-container">
+                    <div class="aboutpage02-item">
+                        <img src="img/digital_creative.png" alt="強みを表すアイコン">
+                        <h2>デジタル×ものづくりに興味があります</h2>
+                        <p>ものづくりは私にとって最大の原動力です。デジタルだからこそ生み出せる表現を追究し、今までにない体験をつくりたいと考えています。</p>
+                    </div>
+                    <span class="aboutpage02-border"></span>
+                    <div class="aboutpage02-item">
+                        <img src="img/entertain.png" alt="強みを表すアイコン">
+                        <h2>人を楽しませることが好きです</h2>
+                        <p>ものづくりを通して人を楽しませることが夢です。特に「仕掛けづくり」が好きで、それを叶えるプログラミングに興味があります。</p>
+                    </div>
+                    <span class="aboutpage02-border"></span>
+                    <div class="aboutpage02-item">
+                        <img src="img/learn.png" alt="強みを表すアイコン">
+                        <h2>学び続けることができます</h2>
+                        <p>常に学ぶことで成長していきたいという思いがあります。新しい技術を積極的に学び、期待を超えるものを作れるよう日々精進します。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="aboutpage03">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number">03</span>Skill Set</h1>
+                    </div>
+                </div>
+
+                <div class="workspage01-right">
+                    <div class="workspage01-right-item">
+                        <div class="aboutpage03-blank">
+                            <h2>Web Design</h2>
+                        </div>
+                        <div>
+                            <p>バナー・LP・WEBサイトのデザインを制作することができます</p>
+                            <p class="skill-border">ツール：Figma, Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <div class="aboutpage03-blank">
+                            <h2>Web Development</h2>
+                        </div>
+                        <div>
+                            <p>コーディング/プログラミングでWEBサイトを実装することができます</p>
+                            <p class="skill-border">言語：HTML/CSS, JavaScript, jQuery, PHP<br>CMS：WordPress（オリジナルテーマ作成可能）</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="aboutpage04">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number">04</span>Hobby Projects</h1>
+                    </div>
+                </div>
+
+                <div class="aboutpage04-container">
+                    <div class="works-container">
+                        <h2>&#9472; AR &#9472;</h2>
+                        <div class="works-item">
+                            <a href="ar01.html"><img src="img/ar_cover.png" alt="カバー画像"></a>
+                            <p>星物語<br>/ Unity</p>
+                        </div>
+                    </div>
+                    
+                    <div class="works-container">
+                        <h2>&#9472; 3DCG &#9472;</h2>
+                        <div class="works-item">
+                            <a href="3dcg01.html"><img src="img/3dcg01_cover.png" alt="カバー画像"></a>
+                            <p>Fantasy Island<br>/ Unreal Engine 5</p>
+                        </div>
+                        <div class="works-item">
+                            <a href="3dcg02.html"><img src="img/3dcg02_cover.png" alt="カバー画像"></a>
+                            <p>牛乳パック<br>/ Blender</p>
+                        </div>
+                        <div class="works-item">
+                            <a href="3dcg03.html"><img src="img/3dcg03_cover.png" alt="カバー画像"></a>
+                            <p>夜の海<br>/ Blender</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>arisa.iba.portfolio</p>
+    </footer>
+
+    <!-- ハンバーガーメニュー -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</body>
+
+</html>

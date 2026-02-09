@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <link rel="icon" href="img/portfolio_icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+    (function(d) {
+        var config = {
+        kitId: 'azg4xlw',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
+    <!-- p5.js -->
+    <script src="library/p5.min.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">Arisa Iba</a>
+        <!-- ハンバーガーアイコン -->
+        <button class="hamburger-menu" aria-label="メニューを開く">
+            <span class="hamburger01"></span>
+            <span class="hamburger02"></span>
+        </button>
+
+        <div class="nav">
+            <img src="img/left_cloud.png" class="cloud" alt="雲のイラスト">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/right_cloud.png" class="cloud" alt="雲のイラスト">
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <!-- メインビジュアル -->
+            <section class="mv">
+                <h1 id="mv-title01">Arisa Iba</h1>
+                <h1 id="mv-title02">Portfolio</h1>
+                <div class="mv-right">
+                    <h2>Web Engineering</h2>
+                    <span></span>
+                </div>
+            </section>
+
+            <!-- Works -->
+            <section id="works">
+                <h1 class="title">Works</h1>
+                <div class="works-container">
+                    <div class="works-item">
+                        <a href="works01.html"><img src="img/works01.png" alt="さわやか歯科クリニック"></a>
+                        <p>さわやか歯科クリニック<br>/ WEBサイト</p>
+                    </div>
+                    <div class="works-item">
+                        <a href="works02.html"><img src="img/works02.png" alt="Cafe Harmonie"></a>
+                        <p>Cafe Harmonie<br>/ WEBサイト</p>
+                    </div>
+                    <div class="works-item">
+                        <a href="works03.html"><img src="img/works03.png" alt="AIを活用した業務効率化セミナー"></a>
+                        <p>AIを活用した業務効率化セミナー<br>/ LP</p>
+                    </div>
+                    <div class="works-item">
+                        <a href="works04.html"><img src="img/works04.png" alt="わくわく英会話教室"></a>
+                        <p>わくわく英会話教室<br>/ バナー</p>
+                    </div>
+                    <div class="works-item">
+                        <a href="works05.html"><img src="img/works05.png" alt="Smooth Bitter"></a>
+                        <p>Smooth Bitter<br>/ バナー</p>
+                    </div>
+                    <div class="works-item">
+                        <a href="works06.html"><img src="img/works06.png" alt="OUTDOOR FESTIVAL2025"></a>
+                        <p>OUTDOOR FESTIVAL2025<br>/ バナー</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-me">
+                <img src="img/about_me_img.png" class="about-me-left" alt="3つの強みを表すアイコン">
+                <div class="about-me-right">
+                    <h1 class="title">About Me</h1>
+                    <a href="about-me.html" class="btn"><span class="btn-border">Learn more</span><img src="img/arrow.svg" class="btn-arrow" alt="矢印"></a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h1 class="title">Contact</h1>
+                <p>arisa.iba.111@gmail.com</p>
+            </section>
+        </article> 
+    </main>
+
+    <footer>
+        <p>arisa.iba.portfolio</p>
+    </footer>
+
+    <!-- ハンバーガーメニュー -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</body>
+
+</html>

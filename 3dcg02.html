@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <link rel="icon" href="img/portfolio_icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+    (function(d) {
+        var config = {
+        kitId: 'azg4xlw',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
+    <!-- p5.js -->
+    <script src="library/p5.min.js"></script>
+    <script src="js/sketch.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <!-- ロゴ -->
+        <a href="index.html" class="logo">Arisa Iba</a>
+        <!-- ハンバーガーアイコン -->
+        <button class="hamburger-menu" aria-label="メニューを開く">
+            <span class="hamburger01"></span>
+            <span class="hamburger02"></span>
+        </button>
+
+        <div class="nav">
+            <img src="img/left_cloud.png" class="cloud" alt="雲のイラスト">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/right_cloud.png" class="cloud" alt="雲のイラスト">
+        </div>
+    </header>
+
+    <main class="ar01page">
+        <article class="works02page">
+            <section class="workspage-mv">
+                <div class="workspage-mv-title">
+                    <h1>牛乳パック</h1>
+                    <p>3DCGアニメーション</p>
+                </div>
+            </section>
+
+            <section class="works02page-video">
+                <video src="videos/3dcg02.mp4" autoplay muted loop></video>
+            </section>
+                
+
+            <!-- Design Concept -->
+            <section class="workspage01">
+                <div class="workspage01-left">
+                    <div class="workspage01-left-title">
+                        <span class="title-border"></span>
+                        <h1><span class="number"></span>Description</h1>
+                    </div>
+                    <p>YouTube動画を参考に、Blenderでポップな牛乳パックをイメージした3DCGのモデリング・アニメーションを作成しました。</p>
+                </div>
+
+                <div class="workspage01-right">
+                    <div class="workspage02-blank01"></div>
+                    <div class="workspage01-right-item">
+                        <div class="workspage02-blank02">
+                            <h2>Tool</h2>
+                        </div>
+                        <p>Blender</p>
+                    </div>
+                    <div class="workspage01-right-item">
+                        <div class="workspage02-blank02">
+                            <h2>Reference</h2>
+                        </div>
+                        <p>YouTube「幻想的…&#33;イラスト風ドリンクの作り方&#124;モデリング〜アニメーション【blender】」<br>URL: <a href="https://youtu.be/NxJV72m9INE?si=dM1hkGfTz6B9FL6i">https://youtu.be/NxJV72m9INE?si=dM1hkGfTz6B9FL6i</a></p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>arisa.iba.portfolio</p>
+    </footer>
+
+    <!-- ハンバーガーメニュー -->
+    <script type="text/javascript" src="js/hamburger.js"></script>
+</body>
+
+</html>

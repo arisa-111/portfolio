@@ -1,0 +1,1219 @@
+/*
+Theme Name: Portfolio
+Description: ポートフォリオサイト
+Author: ARISA IBA
+*/
+
+
+/********** 基本設定 ************/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Manrope", "source-han-sans-japanese", sans-serif;
+    color: #002366;
+}    
+
+main {
+    flex: 1;
+}
+
+
+/* 共通CSS */
+
+p {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+}
+
+.title {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-size: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .title {
+        font-size: 64px;
+    }
+}
+
+/* ヘッダー */
+header {
+    z-index: 1000;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+}
+
+.logo {
+    z-index: 120;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    color: #002366;
+}
+
+/* ハンバーガーアイコン */
+
+.hamburger-menu {
+        z-index: 120;
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+    border-radius: 6px;
+    background-color: #002366;
+}
+    
+.hamburger01 {
+    width: 45px;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.hamburger02 {
+    width: 20px;
+    transition: all 0.4s ease;
+}
+
+.hamburger-menu.is-open .hamburger01 {
+    transform: rotate(25deg) translate(3px, 3px);
+}
+
+.hamburger-menu.is-open .hamburger02 {
+    transform: rotate(-25deg) translate(6px, -6px);
+    width: 45px;
+}
+
+/* ハンバーガーメニュー */
+
+.nav {
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #DCF3FA;
+    transition: all 0.5s;
+}
+
+.nav.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+}
+
+.nav li {
+    list-style: none;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 430px) {
+    .nav li {
+        margin-bottom: 8%;
+    }
+}
+
+.nav a {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    text-decoration: none;
+    color: #002366;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 430px) {
+    .nav a {
+        font-size: 32px;
+    }
+}
+
+.nav a:hover {
+    color: #FFFFFF;
+}
+
+.cloud {
+    width: 25%;
+    object-fit: contain;
+}
+
+/************ トップページ ***************/
+
+/* メインビジュアル */
+
+.mv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#mv-title01 {
+    z-index: 1;
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-size: 110px;
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    letter-spacing: 0.1em;
+}
+
+#mv-title02 {
+    z-index: 1;
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-size: 110px;
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 1024px) {
+    #mv-title01 {
+        font-size: 80px;
+        top: 35%;
+        font-weight: 500;
+    }
+
+    #mv-title02 {
+        font-size: 80px;
+        font-weight: 500;
+        left: 35%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #mv-title01 {
+        font-size: 32px;
+        top: 39%;
+        left: 25%;
+        font-weight: 500;
+    }
+
+    #mv-title02 {
+        font-size: 32px;
+        font-weight: 500;
+        left: 40%;
+    }
+}
+
+.mv-right {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .mv-right {
+        top: 20%;
+    }
+}
+
+.mv-right h2 {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.4em;
+    padding-right: 5px;
+}
+
+.mv-right span {
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: #002366;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 430px) {
+    .mv-right h2 {
+        font-size: 14px;
+    }
+
+    .mv-right span {
+        width: 25px;
+        margin-top: 20px;
+    }
+}
+
+/* Works */
+#works {
+    padding: 0 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    #works {
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #works .title {
+        padding-left: 15px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.works-container {
+    max-width: 1008px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.works-item p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    margin-top: -30px;
+    padding-left: 40px;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+}
+
+.works-item img {
+    transition: all 0.2s ease;
+}
+
+.works-item img:hover {
+    transform: translateX(8px);
+    transform: translateY(8px);
+}
+
+/* About Me */
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    padding: 7% 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me {
+        padding-left: 5%;
+        padding-right: 8%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-me {
+        flex-direction: column;
+        justify-content: none;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .about-me .title {
+        margin: 20px 0;
+    }
+}
+
+.about-me-left {
+    width: 45%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me-left {
+        padding-top: 5%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-me-left {
+        width: 100%;
+    }
+}
+
+.about-me-right {
+    padding-top: 10%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me-right {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-me-right {
+        padding-top: 0; 
+    }
+}
+
+.btn-border {
+    text-decoration: none;
+    color: #002366;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-border::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: -4px;
+    width: 108%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-border::after {
+    transform: scaleX(1);
+}
+
+.btn-arrow {
+    display: inline-block;
+    margin-bottom: -9px;
+    margin-left: 7px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-arrow {
+    transform: translateX(6px);
+}
+
+/* Contact */
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    #contact {
+        padding: 10% 5%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #contact {
+        flex-direction: column;
+        justify-content: none;
+        align-items: flex-start;
+        padding: 10% 5%;
+    }
+}
+
+#contact p {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    #contact p {
+        font-size: 18px;
+        margin-top: 30px;
+        padding-right: 5%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #contact p {
+        font-size: 16px;
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+/* フッター */
+
+footer {
+    padding-top: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        padding-top: 20%;
+    }
+}
+
+footer p {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    font-size: 14px;
+}
+
+
+/******** Works01 *********/
+
+/* メインビジュアル（共通） */
+
+.workspage-mv {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    padding: 13% 20% 0 15%;
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage-mv {
+        height: 50vh;
+        padding-top: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-mv {
+        padding: 40% 10% 0 10%;
+        margin-bottom: 100px;
+    }
+}
+
+.workspage-mv-title {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-bottom: 15%;
+}
+
+.workspage-mv-title h1 {
+    font-weight: 300;
+    font-size: 46px;
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage-mv-title h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-mv-title h1 {
+        font-size: 24px;
+    }
+}
+
+.workspage-mv-title p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-mv-title p {
+        margin: 0;
+    }
+}
+
+.workspage-mv .btn {
+    align-self: flex-end;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-mv .btn {
+        padding-top: 10px;
+    }
+    
+    .workspage-mv .btn-border {
+        font-size: 16px;
+        padding-top: 0;
+    }
+
+    .workspage-mv .btn-arrow {
+        width: 25px;
+        padding-bottom: 3px;
+    }
+}
+
+/* workspage-intro */
+
+.workspage-intro {
+    padding: 7% 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage-intro {
+        padding: 0 10%;
+    }
+}
+
+.workspage-intro-text-container {
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-intro-text-container {
+        flex-direction: column;
+    }
+}
+
+.workspage-intro-text-item {
+    padding-right: 7%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage-intro-text-item {
+        padding: 0 2%;
+    }    
+}
+
+.workspage-intro-text-item h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-intro-text-item h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .workspage-intro-text-item p {
+        margin-top: 3px;
+        margin-bottom: 20px;
+    }
+}
+
+.date {
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+}
+
+.workspage-intro-img {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.workspage-intro-img img {
+    display: inline-block;
+    width: 95%;
+    object-fit: contain;
+}
+
+/* workspage01（Design Concept） */
+
+.workspage01 {
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage01 {
+        flex-direction: column;
+    }
+}
+
+.workspage01-left {
+    width: 45%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage01-left {
+        width: 100%;
+    }
+}
+
+.workspage01-left-title {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage01-left-title {
+        padding-top: 7%;
+    }
+}
+
+.workspage01-left-title h1 {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage01-left-title h1 {
+        font-size: 24px;
+        margin-top: 8px;
+    }
+}
+
+.number {
+    font-size: 50px;
+    letter-spacing: 0;
+    font-weight: 400;
+    padding-right: 25px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 430px) {
+    .number {
+        font-size: 36px;
+        padding-left: 10px;
+        padding-right: 12px;
+    }
+}
+
+.title-border {
+    display: inline-block;
+    width: 10%;
+    height: 1px;
+    background-color: #002366;
+}
+
+.workspage01-left p {
+    padding: 0 18%;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage01-left p {
+        padding: 0 12%;
+    }
+}
+
+.workspage01-right {
+    padding-top: 1%;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage01-right {
+        padding: 5% 12%;
+    }
+}
+
+.workspage01-right-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage01-right-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.workspage01-right-item h2 {
+    flex-shrink: 0;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    min-width: 110px;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage01-right-item h2 {
+        margin-bottom: 0;
+    }
+}
+
+.workspage01-right-item p {
+    flex: 1;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage01-right-item p {
+        margin-top: 5px;
+    }
+}
+
+/* workspage-pcimg（PCデザイン掲載） */
+
+.workspage-pcimg {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 430px) {
+    .workspage-pcimg {
+        gap: 0;
+    }
+}
+
+.workspage-pcimg img {
+    width: 40%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* workspage02微調整 */
+
+.workspage02-blank01 {
+    height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage02-blank01 {
+        height: 0px;
+    }
+}
+
+.workspage02-blank02 {
+    width: 160px;
+}
+
+/* workspage-spimg（SPデザイン掲載） */
+
+.workspage-spimg {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage-spimg {
+        gap: 0px;
+    }
+}
+
+.workspage-spimg img {
+    width: 30%;
+    max-width: 301px;
+    height: auto;
+}
+
+/********** About Me ************/
+
+/* メインビジュアル */
+
+.aboutpage-mv {
+    width: 100%;
+    height: 40vh;
+    padding-top: 25vh;
+}
+
+.aboutpage-mv h1 {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-size: 110px;
+    margin: 0;
+    padding-left: 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutpage-mv h1 {
+        font-size: 98px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .aboutpage-mv h1 {
+        font-size: 46px;
+    }
+}
+
+/* aboutpage01（Profile） */
+
+.aboutpage01 {
+    display: flex;
+    padding-top: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutpage01 {
+        flex-direction: column;
+        padding-top: 0;
+    }
+}
+
+.aboutpage01 .workspage01-right {
+    padding-right: 10%;
+    width: 55%;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutpage01 .workspage01-right {
+        width: 100%;
+        padding-right: 10%;
+    }
+}
+
+.aboutpage01 .title-border {
+    width: 15%;
+}
+
+.name-jp {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.0;
+}
+
+.name-en {
+    font-size: 14px;
+    letter-spacing: 0.3em;
+}
+
+.aboutpage01 p {
+    padding-top: 5%;
+}
+
+.background-text {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* My Strengths */
+
+.aboutpage02 {
+    padding-top: 7%;
+}
+
+.aboutpage02-container {
+    display: flex;
+    padding-top: 2%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 430px) {
+    .aboutpage02-container {
+        flex-direction: column;
+    }
+}
+
+.aboutpage02-item {
+    width: 23%;
+    padding: 1% 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutpage02-item {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .aboutpage02-item {
+        width: 100%;
+        padding: 10% 15%;
+    }
+}
+
+.aboutpage02-item h2 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding-top: 20px;
+}
+
+.aboutpage02-item p {
+    text-align: justify;
+}
+
+.aboutpage02-border {
+    width: 1px;
+    height: auto;
+    background-color: #D9D9D9;
+}
+
+@media screen and (max-width: 430px) {
+    .aboutpage02-border {
+        width: auto;
+        height: 1px;
+        margin: 0 10%;
+    }
+}
+
+/* aboutpage03（Skill Set） */
+
+.aboutpage03 {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    width: 100%;
+}
+
+.aboutpage03-blank {
+    width: 270px;
+}
+
+.aboutpage03 .workspage01-right {
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+.skill-border {
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    border: solid 1px #D9D9D9;
+    padding: 5px 10px;
+    margin-top: 0;
+    margin: 0;
+}
+
+.aboutpage03 .workspage01-right-item {
+    margin-bottom: 40px;
+}
+
+/* aboutpage04（Hobby Projects） */
+
+.aboutpage04 {
+    padding-top: 1%;
+}
+
+.aboutpage04-container {
+    padding: 2% 10%;
+}
+
+.aboutpage04-container h2 {
+    font-size: 18px;
+    width: 150px;
+    padding-bottom: 50px;
+}
+
+.aboutpage04-container .works-container {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutpage04-container .works-container{
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    .aboutpage04-container h2 {
+        padding-bottom: 0;
+    }
+}
+
+
+/*********** works02page（Cafe Harmonie） *************/
+
+/* メインビジュアル */
+
+.works02page .workspage-mv {
+    height: 30vh;
+}
+
+/* デザイン掲載 */
+
+.works02page-img {
+    max-width: 1000px;
+    margin: 4% auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .works02page-img {
+        gap: 0;
+    }
+}
+
+.works02page-img-pc {
+    object-fit: contain;
+}
+
+.works02page-img-sp {
+    object-fit: contain;
+}
+
+.works02page-img img {
+    max-width: 100%;
+    height: auto;
+    height: 900px;
+}
+
+@media screen and (max-width: 1024px) {
+    .works02page-img img {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .works02page-img img {
+        height: 450px;
+    }
+}
+
+/* 動画掲載 */
+
+.works02page-video {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.works02page-video video {
+    width: 800px;
+}
+
+@media screen and (max-width: 1024px) {
+    .works02page-video video {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .works02page-video video {
+        width: 350px;
+    }
+}
+
+/********** works03（AIを活用した業務効率化セミナー） ***********/
+
+.works03page-img {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.works03page-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/********** works04（わくわく英会話教室） ***********/
+
+.workspage04-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+}
+
+.workspage04-img img {
+    max-width: 600px;
+    width: 80%;
+}
+
+.workspage04-spimg {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+    .workspage04-spimg img {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .workspage04-spimg img {
+        width: 50%;
+    }
+}
+
+/****** works05 *******/
+
+.workspage05-img img {
+    max-width: 400px;
+}
+
+/****** works06 *******/
+
+.workspage06-img img {
+    max-width: 700px;
+}
+
+/******** ar01 ********/
+
+.ar01page .workspage01 {
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.ar01page_comment {
+    padding: 0 5%;
+}
+
+.ar01page_comment p {
+    text-align: center;
+    font-size: 16px;
+}
+
+/******* 3dcg01 **********/
+
+.threedcg01-img img {
+    width: 100%;
+}
+
+/******* 3dcg03 **********/
+
+.threedcg03-video video {
+    width: 100%;
+}
